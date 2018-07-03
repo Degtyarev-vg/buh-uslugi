@@ -18,6 +18,10 @@
     background-color: #14ac66;
   }
 
+  &_big {
+    padding: 8px 20px;
+  }
+
   &_callback {
     @media (max-width: 768px) {
       font-size: 0;
