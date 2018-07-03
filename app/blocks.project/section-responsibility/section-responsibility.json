@@ -1,0 +1,26 @@
+{
+  "responsibility" : {
+
+    "item1" : {
+      "img" : "img/responsibility/1.svg",
+      "text" : "Качество предоставляемых услуг"
+    },
+    "item2" : {
+      "img" : "img/responsibility/2.svg",
+      "text" : "Конфиденциальность информации"
+    },
+    "item3" : {
+      "img" : "img/responsibility/3.svg",
+      "text" : "Непрерывность ведения учета"
+    },
+    "item4" : {
+      "img" : "img/responsibility/4.svg",
+      "text" : "Оптимизацию налогового планирования"
+    },
+    "item5" : {
+      "img" : "img/responsibility/5.svg",
+      "text" : "Надежность и объективность предоставленных данных"
+    }
+
+  }
+}

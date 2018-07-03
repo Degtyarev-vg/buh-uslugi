@@ -1,0 +1,82 @@
+// Для импорта в файл подключения: @import './app/blocks.project/section-responsibility/section-responsibility';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.section-responsibility {
+  background-color: #fff;
+  text-align: center;
+  padding: 60px 70px;
+  @media (max-width: 992px) {
+    padding: 30px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__item {
+    border-right: 2px solid rgba(190, 189, 190, .41);
+    margin-top: 30px;
+    padding: 0 20px;
+    width: 20%;
+    &:last-of-type {
+      border-right: 0;
+    }
+    @media (max-width: 1310px) {
+      padding: 0 10px;
+    }
+    @media (max-width: 992px) {
+      width: 33.3333333%;
+      border-right: 0;
+    }
+    @media (max-width: 768px) {
+      width: 50%;
+    }
+    @media (max-width: 479px) {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  &__img-container {
+    height: 56px;
+    position: relative;
+  }
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__text {
+    font-family: $proxima_novasemibold;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #3f3f3f;
+    @media (max-width: 1310px) {
+      font-size: 14px;
+    }
+  }
+
+  &__content {
+    font-family: $proxima_novalight;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    margin-top: 35px;
+    color: #3f3f3f;
+    p {
+      margin-top: 15px;
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+mixin section-benefits()
+  +b('section').section-benefits&attributes(attributes)
+    .grid
+      +b('h2').heading._white Ваши выгоды сотрудничества
+      .row
+        +e.list
+          each item in benefits
+            +b.benefit.__benefit
+              +e.inner
+                +e.img-container
+                  +e('img')(src=item.img alt=item.title).img
+                +e('h4').title !{item.title}
+                +e('p').text !{item.text}
