@@ -1,0 +1,48 @@
+// Для импорта в файл подключения: @import './app/blocks.project/logo/logo';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.logo {
+  display: inline-block;
+  font-family: $proxima_novabold;
+  font-size: 0;
+  color: #1a1a1a;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &__one {
+    font-size: 20px;
+    line-height: 20px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
+  &__services {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 4px 0;
+    color: #04c36b;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
+  &__info {
+    font-family: $proxima_novalight;
+    font-size: 14px;
+    line-height: 14px;
+    color: #1a1a1a;
+    text-transform: none;
+    @media (max-width: 768px) {
+      font-size: 9px;
+      line-height: 9px;
+    }
+  }
+}

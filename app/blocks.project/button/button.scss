@@ -1,0 +1,34 @@
+// Для импорта в файл подключения: @import './app/blocks.project/button/button';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.button {
+  background-color: #10d67b;
+  border-radius: 3px;
+  display: inline-block;
+  font-family: $proxima_novasemibold;
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: $transition;
+  padding: 8px 12px;
+  &:hover {
+    background-color: #14ac66;
+  }
+
+  &_callback {
+    @media (max-width: 768px) {
+      font-size: 0;
+      padding: 5px 10px;
+    }
+    span {
+      display: none;
+      @media (max-width: 768px) {
+        display: inline-block;
+        font-size: 14px;
+      }
+    }
+  }
+}

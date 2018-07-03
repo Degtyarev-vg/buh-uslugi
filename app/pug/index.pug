@@ -4,15 +4,14 @@ doctype html
 html(lang='ru')
   include templates/head/head
     block head
-      - var pageTitle = 'There is title';
+      - var pageTitle = 'Бухгалтерские услуги ООО | Аудит и консалтинг';
 
   +page
 
-    +b('header').header.__header
-      //- Content for header
+    +header.__header
 
     +b.content.__content
-      //- Other content
+      p(style='background: green') Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, molestias?
 
     +b('footer').footer.__footer
       //- Content for footer

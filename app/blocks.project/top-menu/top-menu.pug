@@ -1,0 +1,16 @@
+mixin top-menu()
+  +b('nav').top-menu&attributes(attributes)
+    +e('ul').list
+      - let i = 1;
+      each item in topMenu
+        +e('li')(class='item' + ((i == 3) ? '_active' : '') class='' + (item.subMenu ? '_has-child' : '') class='' +
+        ((i == 3) || (i == 4) ? 'link-scroll' : ''))
+          +e('a')(href=item.link).link= item.text
+          if item.subMenu
+            +e('ul').submenu
+              - let j = 1;
+              each subItem in item.subMenu
+                +e('li')(class='submenu-item' + ((j == 2) ? '_active' : ''))
+                  +e('a')(href=subItem.link).submenu-link !{subItem.text}
+                - j++;
+        - i++

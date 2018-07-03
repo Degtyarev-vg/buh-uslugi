@@ -17,8 +17,8 @@ $(function() {
 
     midClick: true,
     removalDelay: 300,
-    // mainClass: 'my-mfp-slide-bottom'
-    mainClass: 'my-mfp-zoom-in'
+    mainClass: 'my-mfp-slide-bottom'
+    // mainClass: 'my-mfp-zoom-in'
   });
 
 });

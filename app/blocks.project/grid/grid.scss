@@ -4,8 +4,8 @@
 @import '../../scss/png-sprite';    // файл с png-спрайтами
 
 
-.grid {
-  width: 1170px;
+/*.grid {
+  max-width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -17,13 +17,36 @@
   &:after {
     clear: both;
   }
-  @media (max-width: 1199px) {
+  @media (min-width: 1310px) {
+    max-width: 1310px;
+  }
+  @media (min-width: 992px) {
+    max-width: 970px;
+  }
+  @media (min-width: 768px) {
+    max-width: 750px;
+  }
+}*/
+.grid {
+  width: 1310px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  @media (max-width: 1310px) {
     width: 970px;
   }
-  @media (max-width: 991px) {
+  @media (max-width: 992px) {
     width: 750px;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 }

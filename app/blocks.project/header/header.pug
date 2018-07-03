@@ -1,0 +1,15 @@
+mixin header()
+  +b('header').header&attributes(attributes)
+    .grid
+      +e.top
+        +e.logo
+          +logo
+        +e.contacts
+          +e.contacts-left
+            +contacts
+          +e.contacts-right
+            +b('a')(href='#callback').button._callback.popup-with-zoom-anim Заказать обратный звонок <span>Обратный звонок</span>
+            +e.city г. Санкт-Петербург
+        +e.menu
+          +hamburger._top-menu
+          +top-menu

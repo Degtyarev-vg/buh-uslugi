@@ -1,0 +1,230 @@
+// Для импорта в файл подключения: @import './app/blocks.project/top-menu/top-menu';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.top-menu {
+  position: relative;
+
+  &__list {
+    font-size: 0;
+    @media (max-width: 768px) {
+      background-color: rgba(67, 67, 67, .85);
+      border-radius: 5px;
+      display: none;
+      padding: 15px;
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 0;
+      width: 100%;
+    }
+    @media (min-width: 769px) {
+      display: block !important;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 50px;
+    position: relative;
+    @media (max-width: 768px) {
+      display: block;
+      margin-right: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .5);
+      padding: 10px 0;
+    }
+    &:last-of-type {
+      margin-right: 0;
+      @media (max-width: 768px) {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+    &:first-of-type {
+      @media (max-width: 768px) {
+        padding-top: 0;
+      }
+    }
+    &:hover > .top-menu__submenu {
+      transform: rotateX(0deg) translateX(-50%);
+      visibility: visible;
+      opacity: 1;
+      @media (max-width: 768px) {
+        transform: rotateX(0deg) translateX(0);
+      }
+    }
+    &:hover, &_active {
+      .top-menu__link {
+        color: $accentColor;
+        @media (max-width: 768px) {
+          color: #fff;
+        }
+      }
+    }
+    &_active {
+      .top-menu__link {
+        color: $accentColor;
+        @media (max-width: 768px) {
+          color: #fff;
+        }
+      }
+    }
+    &_has-child {
+      .top-menu__link {
+        padding-right: 20px;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          transition: $transition;
+          height: 9px;
+          width: 14px;
+          background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%229%22%20width%3D%2214%22%3E%3Cpath%20d%3D%22M7%205.127L12.081%200%2014%201.936%207%209%200%201.936%201.918%200z%22%20fill%3D%22%2310d67b%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+          background-size: contain;
+          @media (max-width: 768px) {
+            transform: translateY(-50%) rotate(-90deg);
+          }
+        }
+      }
+      &:hover {
+        .top-menu__link {
+          &:before {
+            transform: translateY(-50%) rotate(180deg);
+            @media (max-width: 768px) {
+              transform: translateY(-50%) rotate(-90deg);
+            }
+          }
+        }
+      }
+    }
+    &_open {
+      .top-menu__link {
+        color: $accentColor !important;
+        &:before {
+          transform: translateY(-50%) rotate(0deg) !important;
+        }
+      }
+    }
+  }
+
+  &__link, &__submenu-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: $transition;
+    position: relative;
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__link {
+    font-family: $proxima_novasemibold;
+    font-size: 16px;
+    color: #1a1a1a;
+    @media (max-width: 768px) {
+      color: #fff;
+    }
+  }
+
+  &__submenu-link {
+    font-size: 14px;
+    color: #ffffff;
+    padding-left: 14px;
+    margin-bottom: 9px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 3px;
+      width: 3px;
+      background-color: $accentColor;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      right: 0;
+      height: 1px;
+      width: calc(100% - 14px);
+      background-color: #888888;
+      transition: $transition;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    &:hover {
+      color: $accentColor;
+      text-decoration: none;
+      @media (max-width: 768px) {
+        color: #fff;
+      }
+      &:after {
+        width: 0;
+      }
+    }
+  }
+
+  &__submenu-item {
+    &:last-of-type {
+      .top-menu__submenu-link {
+        margin-bottom: 0;
+      }
+    }
+    &_active {
+      .top-menu__submenu-link {
+        color: $accentColor;
+        &:after {
+          width: 0;
+        }
+      }
+    }
+  }
+
+  &__submenu {
+    background-color: rgba(67, 67, 67, .85);
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transform-origin: 0% 0%;
+    transform-style: preserve-3d;
+    transform: rotateX(-90deg) translateX(-50%);
+    transition: $transition;
+    padding: 20px 30px;
+    width: 213px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: 0;
+      height: 15px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0);
+      z-index: 5;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    @media (max-width: 768px) {
+      display: none;
+      background-color: transparent;
+      position: static;
+      transform-style: flat;
+      transform: rotateX(0deg) translateX(0);
+      transition: none;
+      visibility: visible;
+      padding: 10px 10px 0 10px;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      width: 100%;
+    }
+  }
+
+}
