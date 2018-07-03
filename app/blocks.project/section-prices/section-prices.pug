@@ -1,0 +1,66 @@
+mixin section-prices()
+  +b('section').section-prices&attributes(attributes)
+    .grid
+      +b('h2').heading._gray Цены на бухгалтерские услуги
+      +b.price-block.__price-block
+        +e.left
+          +e('h3').name Тариф «Эконом»
+          +e('p').info До 4 человек / до 40 операций
+          +e('p').price от
+            +e('span').number 3 500
+            | в месяц
+        +e.right
+          table
+            thead
+              tr
+                td Система налогообложения
+                td Услуги / Торговля
+                td Производство / Строительство
+            tbody
+              tr
+                td ЕНВД
+                td 3500 руб.
+                td -
+              tr
+                td УСН Доходы 6%
+                td 3500 руб.
+                td 4000 Руб.
+              tr
+                td УСН Доходы - Расходы 7%
+                td 4000 руб.
+                td 4500 руб.
+              tr
+                td ОСН
+                td 4000 руб.
+                td 5000 руб.
+      +b.price-block.__price-block
+        +e.left
+          +e('h3').name Тариф «Стандарт»
+          +e('p').info До 6 человек / до 80 операций
+          +e('p').price от
+            +e('span').number 6 000
+            | в месяц
+        +e.right
+          table
+            thead
+              tr
+                td Система налогообложения
+                td Услуги / Торговля
+                td Производство / Строительство
+            tbody
+              tr
+                td ЕНВД
+                td 6000 руб.
+                td -
+              tr
+                td УСН Доходы 6%
+                td 6000 руб.
+                td 6500 Руб.
+              tr
+                td УСН Доходы - Расходы 7%
+                td 7000 руб.
+                td 8000 руб.
+              tr
+                td ОСН
+                td 8000 руб.
+                td 9000 руб.
