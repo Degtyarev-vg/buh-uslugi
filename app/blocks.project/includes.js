@@ -2,3 +2,4 @@
 //= include top-menu/top-menu.js
 //= include link-scroll/link-scroll.js
 //= include hamburger/hamburger.js
+//= include footer-menu/footer-menu.js

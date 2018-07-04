@@ -1,0 +1,15 @@
+mixin section-form()
+  +b('section').section-form&attributes(attributes)
+    .grid
+      +e('h2').heading Остались вопросы? Оставьте заявку, мы свяжемся с вами:
+      +e('form')(action='#' method='post' autocomplete='off').form
+        +e.left
+          +e('label')(for='name').label Имя
+          +e('input')(type='text' name='name' id='name').input
+          +e('label')(for='phone').label Телефон
+          +e('input')(type='text' name='phone' id='phone').input
+        +e.right
+          +e('label')(for='text').label Коментарий
+          +e('textarea')(name='text' id='text').textarea
+        +e('input')(type='submit' value='Отправить').button
+        +e('span').personal Нажимая «отправить» вы даете согласие на обработку персональных данных

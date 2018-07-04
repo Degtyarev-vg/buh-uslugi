@@ -1,0 +1,24 @@
+mixin popups()
+  +b.popup.zoom-anim-dialog.mfp-hide#callback&attributes(attributes)
+    +e('h3').title Обратный звонок
+    +e('p').text Не удалось дозовониться?<br/>Оставте свой номер теефона и первый освободившийся специалист свяжется с Вами.
+    +e('form')(action='#' method='post' autocomplete='off').form
+      +e('label')(for='name2').label Имя
+      +e('input')(type='text' name='name' id='name2').input
+      +e('label')(for='phone2').label Телефон
+      +e('input')(type='text' name='phone' id='phone2').input
+      +e.info Нажимая «отправить» вы даете согласие на обработку персональных данных
+      +b('input')(type='submit' value='Отправить').button.__button
+
+  +b.popup.zoom-anim-dialog.mfp-hide#cooperation&attributes(attributes)
+    +e('h3').title Обсудить сотрудничество
+    +e('p').text Оставте свой номер телефона и наш специалист свяжется с Вами.
+    +e('form')(action='#' method='post' autocomplete='off').form
+      +e('label')(for='name3').label Имя
+      +e('input')(type='text' name='name' id='name3').input
+      +e('label')(for='phone3').label Телефон
+      +e('input')(type='text' name='phone' id='phone3').input
+      +e('label')(for='text2').label Коментарий
+      +e('textarea')(name='text' id='text2').textarea
+      +e.info Нажимая «отправить» вы даете согласие на обработку персональных данных
+      +b('input')(type='submit' value='Отправить').button.__button

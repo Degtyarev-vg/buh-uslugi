@@ -1,0 +1,13 @@
+mixin footer()
+  +b('footer').footer&attributes(attributes)
+    .grid
+      +e.content
+        +e.logo-container
+          +logo
+        +e.contacts-container
+          +e.city г. Санкт-Петербург
+          +contacts
+          br
+          +b('a')(href='#callback').button._callback.popup-with-zoom-anim.__callback Заказать обратный звонок<span>Обратный звонок</span>
+        +e.menu-container
+          +footer-menu

@@ -1,0 +1,70 @@
+// Для импорта в файл подключения: @import './app/blocks.project/footer/footer';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.footer {
+  background-color: #ebebeb;
+  padding: 50px 0;
+  @media (max-width: 992px) {
+    padding: 20px 0;
+  }
+
+  &__content {
+    font-size: 0;
+  }
+
+  &__logo-container, &__menu-container, &__contacts-container {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+  }
+
+  &__logo-container {
+    width: 166px;
+    @media (max-width: 768px) {
+      width: 116px;
+    }
+  }
+
+  &__contacts-container {
+    width: 226px;
+    left: calc(100% - 392px);
+    @media (max-width: 768px) {
+      width: 137px;
+      left: calc(100% - 253px);
+    }
+  }
+
+  &__menu-container {
+    width: calc(100% - 392px);
+    right: 226px;
+    text-align: center;
+    padding: 0 40px;
+    @media (max-width: 1310px) {
+      width: 100%;
+      right: 0;
+      padding: 0;
+      margin-top: 30px;
+    }
+  }
+
+  &__city {
+    font-family: $proxima_novasemibold;
+    font-size: 16px;
+    line-height: 16px;
+    color: #043434;
+    margin: 0 0 15px 40px;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__callback {
+    margin-top: 15px;
+    @media (max-width: 768px) {
+      margin-top: 7px;
+    }
+  }
+}

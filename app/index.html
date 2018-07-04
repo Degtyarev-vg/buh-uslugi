@@ -90,11 +90,11 @@
                     </li>
                   </ul>
                 </li>
-                <li class="top-menu__item top-menu__item_active link-scroll">
-                  <a class="top-menu__link" href="#prices">Цены</a>
+                <li class="top-menu__item top-menu__item_active">
+                  <a class="top-menu__link link-scroll" href="#prices">Цены</a>
                 </li>
-                <li class="top-menu__item link-scroll">
-                  <a class="top-menu__link" href="#contacts">Контакты</a>
+                <li class="top-menu__item">
+                  <a class="top-menu__link link-scroll" href="#contacts">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -110,8 +110,8 @@
             <span class="header__price">от
               <span>3500</span> руб</span>
             <div class="header__buttons">
-              <a class="button button_big header__button header__btn-more" href="#">Подробнее о ценах</a>
-              <a class="button button_big header__button" href="#">Обсудить сотрудничество</a>
+              <a class="button button_big header__button header__btn-more link-scroll" href="#prices">Подробнее о ценах</a>
+              <a class="button button_big header__button popup-with-zoom-anim" href="#cooperation">Обсудить сотрудничество</a>
             </div>
           </div>
         </div>
@@ -306,8 +306,127 @@
           </div>
         </div>
       </section>
+      <section class="section-form" id="contacts">
+        <div class="grid">
+          <h2 class="section-form__heading">Остались вопросы? Оставьте заявку, мы свяжемся с вами: </h2>
+          <form class="section-form__form" action="#" method="post" autocomplete="off">
+            <div class="section-form__left">
+              <label class="section-form__label" for="name">Имя </label>
+              <input class="section-form__input" type="text" name="name" id="name" />
+              <label class="section-form__label" for="phone">Телефон </label>
+              <input class="section-form__input" type="text" name="phone" id="phone" /> </div>
+            <div class="section-form__right">
+              <label class="section-form__label" for="text">Коментарий </label>
+              <textarea class="section-form__textarea" name="text" id="text"></textarea>
+            </div>
+            <input class="section-form__button" type="submit" value="Отправить" />
+            <span class="section-form__personal">Нажимая «отправить» вы даете согласие на обработку персональных данных</span>
+          </form>
+        </div>
+      </section>
     </div>
-    <footer class="footer page__footer"> </footer>
+    <footer class="footer page__footer">
+      <div class="grid">
+        <div class="footer__content">
+          <div class="footer__logo-container">
+            <a class="logo" href="/">
+              <span class="logo__one">Бухгалтерские</span>
+              <span class="logo__services">Услуги ООО</span>
+              <span class="logo__info">Аудит и консалтинг</span>
+            </a>
+          </div>
+          <div class="footer__contacts-container">
+            <div class="footer__city">г. Санкт-Петербург </div>
+            <div class="contacts">
+              <a class="contacts__phone" href="tel:88125455555">
+                <span>8 (812)</span> 545 55 55</a>
+              <div class="contacts__mode">Пн - Пт, 9-00 до 18-00 </div>
+            </div>
+            <br/>
+            <a class="button button_callback popup-with-zoom-anim footer__callback" href="#callback">Заказать обратный звонок
+              <span>Обратный звонок</span>
+            </a>
+          </div>
+          <div class="footer__menu-container">
+            <nav class="footer-menu">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item footer-menu__item_has-child">
+                  <a class="footer-menu__link" href="javascript:undefined">Бухгалтерские услуги</a>
+                  <ul class="footer-menu__submenu">
+                    <li class="footer-menu__submenu-item">
+                      <a class="footer-menu__submenu-link" href="#">Ссылка на услугу - 1</a>
+                    </li>
+                    <li class="footer-menu__submenu-item footer-menu__submenu-item_active">
+                      <a class="footer-menu__submenu-link" href="#">Ссылка на услугу - 2</a>
+                    </li>
+                    <li class="footer-menu__submenu-item">
+                      <a class="footer-menu__submenu-link" href="#">Ссылка на услугу - 3</a>
+                    </li>
+                    <li class="footer-menu__submenu-item">
+                      <a class="footer-menu__submenu-link" href="#">Ссылка на услугу - 4</a>
+                    </li>
+                    <li class="footer-menu__submenu-item">
+                      <a class="footer-menu__submenu-link" href="#">Ссылка на услугу - 5</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="footer-menu__item footer-menu__item_has-child">
+                  <a class="footer-menu__link" href="javascript:undefined">Консалтинг</a>
+                  <ul class="footer-menu__submenu">
+                    <li class="footer-menu__submenu-item">
+                      <a class="footer-menu__submenu-link" href="#">Ссылка на услугу - 1</a>
+                    </li>
+                    <li class="footer-menu__submenu-item footer-menu__submenu-item_active">
+                      <a class="footer-menu__submenu-link" href="#">Ссылка на услугу - 2</a>
+                    </li>
+                    <li class="footer-menu__submenu-item">
+                      <a class="footer-menu__submenu-link" href="#">Ссылка на услугу - 3</a>
+                    </li>
+                    <li class="footer-menu__submenu-item">
+                      <a class="footer-menu__submenu-link" href="#">Ссылка на услугу - 4</a>
+                    </li>
+                    <li class="footer-menu__submenu-item">
+                      <a class="footer-menu__submenu-link" href="#">Ссылка на услугу - 5</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="footer-menu__item footer-menu__item_active">
+                  <a class="footer-menu__link link-scroll" href="#prices">Цены</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a class="footer-menu__link link-scroll" href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="popup zoom-anim-dialog mfp-hide" id="callback">
+      <h3 class="popup__title">Обратный звонок </h3>
+      <p class="popup__text">Не удалось дозовониться?
+        <br/>Оставте свой номер теефона и первый освободившийся специалист свяжется с Вами. </p>
+      <form class="popup__form" action="#" method="post" autocomplete="off">
+        <label class="popup__label" for="name2">Имя </label>
+        <input class="popup__input" type="text" name="name" id="name2" />
+        <label class="popup__label" for="phone2">Телефон </label>
+        <input class="popup__input" type="text" name="phone" id="phone2" />
+        <div class="popup__info">Нажимая «отправить» вы даете согласие на обработку персональных данных </div>
+        <input class="button popup__button" type="submit" value="Отправить" /> </form>
+    </div>
+    <div class="popup zoom-anim-dialog mfp-hide" id="cooperation">
+      <h3 class="popup__title">Обсудить сотрудничество </h3>
+      <p class="popup__text">Оставте свой номер телефона и наш специалист свяжется с Вами. </p>
+      <form class="popup__form" action="#" method="post" autocomplete="off">
+        <label class="popup__label" for="name3">Имя </label>
+        <input class="popup__input" type="text" name="name" id="name3" />
+        <label class="popup__label" for="phone3">Телефон </label>
+        <input class="popup__input" type="text" name="phone" id="phone3" />
+        <label class="popup__label" for="text2">Коментарий </label>
+        <textarea class="popup__textarea" name="text" id="text2"></textarea>
+        <div class="popup__info">Нажимая «отправить» вы даете согласие на обработку персональных данных </div>
+        <input class="button popup__button" type="submit" value="Отправить" /> </form>
+    </div>
     <link href="css/style.min.css" rel="stylesheet" />
     <script src="js/libs.min.js"></script>
     <script src="js/blocks.min.js"></script>

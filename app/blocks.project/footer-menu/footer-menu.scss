@@ -1,0 +1,169 @@
+// Для импорта в файл подключения: @import './app/blocks.project/footer-menu/footer-menu';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.footer-menu {
+  text-align: left;
+  font-size: 14px;
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__item {
+    &_active {
+      .footer-menu__link {
+        color: #04c36b;
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      border-bottom: 1px solid $accentColor;
+    }
+    &:last-of-type {
+      @media (max-width: 768px) {
+        border-bottom: 0;
+      }
+    }
+    &_has-child {
+      .footer-menu__link {
+        @media (max-width: 768px) {
+          padding-right: 30px;
+          &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%) rotate(-90deg);
+            transition: $transition;
+            height: 9px;
+            width: 14px;
+            background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%229%22%20width%3D%2214%22%3E%3Cpath%20d%3D%22M7%205.127L12.081%200%2014%201.936%207%209%200%201.936%201.918%200z%22%20fill%3D%22%2310d67b%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+    &_open {
+      .footer-menu__link {
+        color: $accentColor !important;
+        &:after {
+          transform: translateY(-50%) rotate(0deg) !important;
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-family: $proxima_novasemibold;
+    font-size: 14px;
+    line-height: 14px;
+    text-decoration: none;
+    transition: $transition;
+    position: relative;
+    padding-bottom: 14px;
+    color: #1a1a1a;
+    @media (max-width: 768px) {
+      display: block;
+      font-size: 14px;
+      line-height: 1.2;
+      padding: 10px 0;
+      text-transform: uppercase;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      width: 36px;
+      background-color: #04c36b;
+      transition: $transition;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    &:hover {
+      color: #04c36b;
+      @media (max-width: 768px) {
+        color: #1a1a1a;
+      }
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  &__submenu {
+    margin-top: 15px;
+    @media (max-width: 768px) {
+      display: none;
+      margin: 15px 0;
+    }
+  }
+
+  &__submenu-item {
+    padding: 3px 0;
+    &:first-of-type {
+      padding-top: 0;
+    }
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+    &_active {
+      .footer-menu__submenu-link {
+        color: darken(#1a1a1a, 25%);
+        &:after {
+          width: calc(100% - 14px);
+        }
+      }
+    }
+  }
+
+  &__submenu-link {
+    display: inline-block;
+    font-family: $proxima_novalight;
+    font-size: 14px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: $transition;
+    color: #1a1a1a;
+    padding-left: 14px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 3px;
+      width: 3px;
+      background-color: #00e67c;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      width: 0;
+      background-color: #c4c4c4;
+      transition: $transition;
+    }
+    &:hover {
+      color: darken(#1a1a1a, 25%);
+      &:after {
+        width: calc(100% - 14px);
+      }
+    }
+  }
+}

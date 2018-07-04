@@ -67,7 +67,8 @@
   cursor: zoom-in; }
 
 .mfp-auto-cursor .mfp-content {
-  cursor: auto; }
+  cursor: auto;
+  text-align: center; }
 
 .mfp-close,
 .mfp-arrow,
