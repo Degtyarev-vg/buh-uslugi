@@ -49,35 +49,88 @@
     table {
       border: 1px solid #aaaaaa;
       width: 100%;
+      @media (max-width: 600px) {
+        border: 0;
+      }
     }
     thead {
       td {
         padding: 8px 10px;
       }
+      @media (max-width: 600px) {
+        display: none;
+      }
     }
     tbody {
       tr {
         border-top: 1px solid #aaaaaa;
+        @media (max-width: 600px) {
+          border: 1px solid #aaaaaa;
+          display: block;
+          padding: 0 10px;
+          margin-bottom: 10px;
+          &:nth-of-type(odd) {
+            background-color: rgba(0, 0, 0, .05);
+          }
+        }
       }
       td {
         padding: 3px 10px;
+        @media (max-width: 600px) {
+          font-size: 0;
+          text-align: left;
+          display: block;
+          padding: 5px 0;
+          &:before {
+            content: attr(data-label);
+            text-transform: uppercase;
+            display: inline-block;
+            width: 60%;
+            font-size: 12px;
+            padding-right: 15px;
+            vertical-align: top;
+          }
+        }
+        span {
+          @media (max-width: 600px) {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 12px;
+            text-align: right;
+            width: 40%;
+          }
+        }
       }
     }
     tr {
       transition: $transition;
       &:hover {
         background-color: rgba(0, 0, 0, .1);
+        @media (max-width: 600px) {
+          background-color: transparent;
+        }
       }
     }
     td {
       border-right: 1px solid #aaaaaa;
+      @media (max-width: 600px) {
+        border-right: 0;
+        border-bottom: 1px dotted #aaaaaa;
+      }
       &:last-of-type {
         border-right: 0;
+        @media (max-width: 600px) {
+          border-bottom: 0;
+        }
       }
       &:first-of-type {
         text-align: left;
         padding-left: 35px;
         padding-right: 34px;
+        @media (max-width: 600px) {
+          padding-left: 0;
+          padding-right: 0;
+        }
       }
     }
   }
